@@ -1,43 +1,21 @@
-# Todo List Project
+# Todo list app
+A todo list app
 
-A simple web-based todo list application that allows users to manage their tasks.
 
-## Table of Contents
+### General steps to follow when creating a project
 
-- [Todo List Project](#todo-list-project)
-  - [Table of Contents](#table-of-contents)
-  - [Demo](#demo)
-  - [Features](#features)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#contributing)
-  - [License](#license)
-
-## Demo
-
-Provide a link to a live demo of your todo list application or screenshots demonstrating its functionality.
-
-## Features
-
-- Add tasks to your todo list.
-- Mark tasks as completed.
-- Edit task descriptions.
-- Delete tasks from the list.
-- Clear all completed tasks.
-- Save tasks locally for later use.
-
-## Getting Started
-
-### Prerequisites
-
-- Web browser (e.g., Chrome, Firefox, Safari)
-
-### Installation
-
-1. Clone the repository:
-
-   ```bash
-   source link:==>>>
-https://github.com/Shahjad12/Todo
+- Thinking about the UI
+- Functionality
+	- Add a TODO
+	- Delete a TODO
+	- check task
+	- total items count
+- Data
+	- tasks - an array
+	- task - {done, text, id}
+- Functions (in code)
+	- addTodo
+	- deleteTodo
+	- checkTodo
+	- renderTodosList
+	- showNotification
