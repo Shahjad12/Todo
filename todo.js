@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (taskText.trim() !== '') {
             const listItem = document.createElement('li');
             listItem.innerHTML = `
+                <input type="checkbox" class="done-checkbox"> <!-- New checkbox -->
                 <span>${taskText}</span>
                 <button class="edit">Edit</button>
                 <button class="delete">Delete</button>
@@ -34,7 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Implement mark as completed functionality
                 listItem.classList.toggle('completed');
             });
+
+            // Check the "Done" checkbox by default
+            listItem.querySelector('.done-checkbox').checked = true;
         }
     });
 });
-
