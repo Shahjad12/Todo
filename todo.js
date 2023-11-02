@@ -8,11 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (taskText.trim() !== '') {
             const listItem = document.createElement('li');
             listItem.innerHTML = `
-                <input type="checkbox" class="done-checkbox"> <!-- New checkbox -->
+            <input type="checkbox" class="complete-checkbox">
                 <span>${taskText}</span>
                 <button class="edit">Edit</button>
                 <button class="delete">Delete</button>
-                <button class="complete">Complete</button>
+                
+
             `;
             taskList.appendChild(listItem);
             taskInput.value = '';
@@ -28,16 +29,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
             listItem.querySelector('.delete').addEventListener('click', function () {
                 // Implement delete functionality
-                listItem.remove();
+                if (confirm('Are you sure you want to delete this task?')) {
+                    listItem.remove();
+                }
             });
 
-            listItem.querySelector('.complete').addEventListener('click', function () {
-                // Implement mark as completed functionality
-                listItem.classList.toggle('completed');
+            const completeCheckbox = listItem.querySelector('.complete-checkbox');
+            completeCheckbox.addEventListener('change', function () {
+                // Implement mark as completed functionality using checkboxes
+                listItem.classList.toggle('completed', completeCheckbox.checked);
             });
-
-            // Check the "Done" checkbox by default
-            listItem.querySelector('.done-checkbox').checked = true;
         }
     });
 });
